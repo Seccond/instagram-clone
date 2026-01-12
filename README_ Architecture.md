@@ -1,6 +1,6 @@
 # 아키텍처
 
-[README](README.md) | [아키텍처](README_Architecture.md)
+[README](README.md) | [아키텍처](README_%20Architecture.md)
 
 ## 개요
 React + Vite 기반 프론트와 Firebase(Auth/Firestore/Storage)를 사용합니다. 피드는 텍스트와 이미지 업로드를 포함합니다.

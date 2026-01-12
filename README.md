@@ -1,6 +1,6 @@
 # 인스타그램 클론코딩
 
-[README](README.md) | [Architecture](README_Architecture.md)
+[README](README.md) | [Architecture](README_%20Architecture.md)
 
 ## 프로젝트 개요
 - 주제: 인스타그램 클론코딩
@@ -27,7 +27,7 @@
 - 홍기현: 아키텍처
 
 ## 문서
-- 아키텍처 상세: [README_Architecture.md](README_아키텍처.md)
+- 아키텍처 상세: [README_%20Architecture.md](README_%20Architecture.md)
 
 ## 실행
 ```bash
