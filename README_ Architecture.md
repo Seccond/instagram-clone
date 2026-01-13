@@ -9,11 +9,14 @@ React + Vite 기반 프론트와 Firebase(Auth/Firestore/Storage)를 사용합�
 ```
 src/
   app/            # App shell, 라우팅, 전역 프로바이더
-  pages/          # Feed, Search, Profile, Auth
-  components/     # 공용 UI 컴포넌트
+    layouts/      # 공통 레이아웃
+    route/        # 라우팅 구성
+    providers/    # 전역 프로바이더/미들웨어
+  pages/          # Feed, Explore, Reels, Direct, Notifications, Auth, Profile
+  components/     # 공용 UI 컴포넌트 (SearchPanel 등)
   features/       # 도메인별 기능 묶음 (feed, auth, profile, search)
   services/       # Firebase 초기화 및 API 래퍼
-  store/          # 전역 상태
+  store/          # 전역 상태 (Redux)
   hooks/          # 커스텀 훅
   styles/         # 전역 스타일
   assets/         # 이미지/아이콘
@@ -22,11 +25,18 @@ src/
 ## 라우팅
 - `/` 피드
 - `/login`, `/signup`
-- `/search`
-- `/profile/:uid`
+- `/explore`
+- `/reels`
+- `/direct/inbox`
+- `/notifications`
+- `/account/profile`
+
+## 검색 구성
+- 검색은 라우터가 아닌 헤더 메뉴에서 토글되는 컴포넌트로 구성
 
 ## 상태 관리
-- 로그인 사용자: 전역 상태 (Context 또는 Zustand)
+- 로그인 사용자: 전역 상태 (Redux Toolkit)
+- 유저 상태 슬라이스: uid, username, nickname, email, photoURL, bio
 - 피드/검색: 로컬 상태 + 캐시 전략
 
 ## Firebase 사용 범위

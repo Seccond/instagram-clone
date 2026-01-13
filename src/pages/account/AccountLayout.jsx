@@ -1,0 +1,12 @@
+import { Outlet } from 'react-router-dom'
+import './AccountLayout.css'
+
+function AccountLayout() {
+  return (
+    <div className="account-layout">
+      <Outlet />
+    </div>
+  )
+}
+
+export default AccountLayout
