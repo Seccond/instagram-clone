@@ -12,7 +12,7 @@ src/
     layouts/      # 공통 레이아웃
     route/        # 라우팅 구성
     providers/    # 전역 프로바이더/미들웨어
-  pages/          # Feed, Explore, Reels, Direct, Notifications, Auth, Profile
+  pages/          # 페이지별 디렉토리 (feed, explore, reels, direct, notifications, auth, account)
   components/     # 공용 UI 컴포넌트 (SearchPanel 등)
   features/       # 도메인별 기능 묶음 (feed, auth, profile, search)
   services/       # Firebase 초기화 및 API 래퍼
