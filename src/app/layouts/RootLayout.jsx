@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
-import SearchPanel from '../../components/SearchPanel.jsx'
+import SearchPanel from '@components/SearchPanel.jsx'
 import './RootLayout.css'
 
 function RootLayout() {
