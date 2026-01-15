@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./LoginPage.css";
+import Button from "@/components/ui/Button/Button";
 
 function LoginPage() {
   const [form, setForm] = useState({ identifier: "", password: "" });
@@ -59,9 +60,9 @@ function LoginPage() {
                 <span />
               </div>
 
-              <button type="button" className="login-forgot">
+              <Button type="button" className="login-forgot">
                 비밀번호를 잊으셨나요?
-              </button>
+              </Button>
             </form>
           </div>
           <p className="login-signup">
