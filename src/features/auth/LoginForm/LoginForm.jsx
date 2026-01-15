@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import EmailVerifyModal from '../EmailVerifyModal/EmailVerifyModal.jsx'
+import EmailVerifyModal from '@features/auth/EmailVerifyModal/EmailVerifyModal.jsx'
 import { loginWithEmail, resendVerificationEmail } from '@services/authApi.js'
 import './LoginForm.css'
 

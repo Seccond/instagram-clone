@@ -13,9 +13,9 @@ src/
     route/        # 라우팅 구성
     providers/    # 전역 프로바이더/미들웨어
   pages/          # 페이지별 디렉토리 (feed, explore, reels, direct, notifications, auth, account)
-  components/     # 공용 UI 컴포넌트 (SearchPanel 등)
-  features/       # 도메인별 기능 묶음 (feed, auth, profile, search)
-  services/       # Firebase 초기화 및 API 래퍼 (apiClient/endpoints/firebaseClient)
+  components/     # 공용 UI 컴포넌트 (SearchPanel, Modal, Input 등)
+  features/       # 도메인별 기능 묶음 (auth 등)
+  services/       # Firebase 초기화 및 API 래퍼 (firebaseClient, authApi)
   store/          # 전역 상태 (Redux)
   hooks/          # 커스텀 훅
   styles/         # 전역 스타일
@@ -23,8 +23,9 @@ src/
 ```
 
 ## 라우팅
-- `/` 피드
-- `/login`, `/signup`
+- `/` 로그인
+- `/feed`
+- `/signup`
 - `/explore`
 - `/reels`
 - `/direct/inbox`
@@ -41,7 +42,7 @@ src/
 
 ## 경로 별칭
 - `@`: `src`
-- `@app`, `@pages`, `@components`, `@styles`, `@services`, `@store`, `@hooks`, `@assets`
+- `@app`, `@pages`, `@components`, `@features`, `@styles`, `@services`, `@store`, `@hooks`, `@assets`
 
 ## Firebase 사용 범위
 - Auth: 회원가입/로그인/로그아웃
@@ -49,7 +50,7 @@ src/
 - Storage: 피드 이미지, 프로필 이미지
 
 ## 데이터 모델 (초안)
-- `users/{uid}`: username, nickname, bio, photoURL, createdAt
+- `users/{uid}`: email, name, nickname, phone, bio, photoURL, createdAt, updatedAt
 - `posts/{postId}`: uid, text, imageURL, createdAt
 - `follows/{uid}/following/{targetUid}` (선택)
 
