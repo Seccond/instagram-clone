@@ -1,6 +1,6 @@
 # 인스타그램 클론코딩
 
-[README](README.md) | [Architecture](README_%20Architecture.md)
+[README](README.md) | [Architecture](README_%20Architecture.md) | [Firebase](README_Firebase.md)
 
 ## 프로젝트 개요
 - 주제: 인스타그램 클론코딩
