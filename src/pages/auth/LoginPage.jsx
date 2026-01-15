@@ -18,13 +18,10 @@ function LoginPage() {
 
   return (
     <main className="login-page">
-      <header className="login-page__header">
-        <h1 className="login-page__logo">Instagram</h1>
-      </header>
-
       <section className="login-page__body">
         <div className="login-page__container">
           <div className="login-card" aria-label="Login card">
+            <h1 className="login-page__logo">Instagram</h1>
             <form className="login-form" onSubmit={onSubmit}>
               <label className="login-field">
                 <span className="sr-only">
@@ -65,12 +62,11 @@ function LoginPage() {
               <button type="button" className="login-forgot">
                 비밀번호를 잊으셨나요?
               </button>
-
-              <p className="login-signup">
-                계정이 없으신가요? <button type="button">가입하기</button>
-              </p>
             </form>
           </div>
+          <p className="login-signup">
+            계정이 없으신가요? <button type="button">가입하기</button>
+          </p>
         </div>
       </section>
 
@@ -84,6 +80,11 @@ function LoginPage() {
           <button type="button">API</button>
           <button type="button">개인정보처리방침</button>
           <button type="button">약관</button>
+          <button type="button">Instagram Lite</button>
+          <button type="button">Meta AI</button>
+          <button type="button">Threads</button>
+          <button type="button">연락처 업로드 & 비사용자</button>
+          <button type="button">Meta Verified</button>
         </nav>
 
         <div className="login-footer__meta">
