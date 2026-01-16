@@ -1,14 +1,14 @@
-import { Route, Routes } from 'react-router-dom'
-import RootLayout from '@app/layouts/RootLayout.jsx'
-import FeedPage from '@pages/feed/FeedPage.jsx'
-import LoginPage from '@pages/auth/LoginPage.jsx'
-import SignupPage from '@pages/auth/SignupPage.jsx'
-import ExplorePage from '@pages/explore/ExplorePage.jsx'
-import ReelsPage from '@pages/reels/ReelsPage.jsx'
-import NotificationsPage from '@pages/notifications/NotificationsPage.jsx'
-import InboxPage from '@pages/direct/InboxPage.jsx'
-import AccountLayout from '@pages/account/AccountLayout.jsx'
-import ProfilePage from '@pages/account/ProfilePage.jsx'
+import { Route, Routes } from "react-router-dom";
+import RootLayout from "@app/layouts/RootLayout.jsx";
+import FeedPage from "@pages/feed/FeedPage.jsx";
+import LoginPage from "@pages/auth/LoginPage.jsx";
+import SignupPage from "@pages/auth/SignupPage.jsx";
+import ExplorePage from "@pages/explore/ExplorePage.jsx";
+import ReelsPage from "@pages/reels/ReelsPage.jsx";
+import NotificationsPage from "@pages/notifications/NotificationsPage.jsx";
+import InboxPage from "@pages/direct/InboxPage.jsx";
+import AccountLayout from "@pages/account/AccountLayout.jsx";
+import ProfilePage from "@pages/account/ProfilePage.jsx";
 
 function AppRoutes() {
   return (
@@ -26,7 +26,7 @@ function AppRoutes() {
       <Route path="/" element={<LoginPage />} />
       <Route path="/signup" element={<SignupPage />} />
     </Routes>
-  )
+  );
 }
 
-export default AppRoutes
+export default AppRoutes;

@@ -7,7 +7,6 @@ function App() {
     <BrowserRouter>
       <div className="app">
         <AppRoutes />
-        BrowserRouter
       </div>
     </BrowserRouter>
   );

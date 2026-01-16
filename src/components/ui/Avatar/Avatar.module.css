@@ -1,0 +1,10 @@
+.avatar {
+  display: inline-block;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  object-fit: cover;
+
+  background: #f2f2f2;
+}
