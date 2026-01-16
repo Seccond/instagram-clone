@@ -1,4 +1,4 @@
-import SignupForm from '@features/auth/SignupForm/SignupForm.jsx'
+import { SignupForm } from '@features/auth'
 import './SignupPage.css'
 
 function SignupPage() {
