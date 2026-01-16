@@ -1,69 +1,14 @@
-import { useState } from "react";
+import { LoginForm } from "@features/auth";
 import "./LoginPage.css";
-import Button from "@/components/ui/Button/Button";
 
 function LoginPage() {
-  const [form, setForm] = useState({ identifier: "", password: "" });
-
-  const isDisabled =
-    form.identifier.trim() === "" || form.password.trim() === "";
-
-  const onChange = (e) => {
-    const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <main className="login-page">
       <section className="login-page__body">
         <div className="login-page__container">
           <div className="login-card" aria-label="Login card">
             <h1 className="login-page__logo">Instagram</h1>
-            <form className="login-form" onSubmit={onSubmit}>
-              <label className="login-field">
-                <span className="sr-only">
-                  전화번호, 사용자 이름 또는 이메일
-                </span>
-                <input
-                  name="identifier"
-                  type="text"
-                  autoComplete="username"
-                  placeholder="전화번호, 사용자 이름 또는 이메일"
-                  value={form.identifier}
-                  onChange={onChange}
-                />
-              </label>
-
-              <label className="login-field">
-                <span className="sr-only">비밀번호</span>
-                <input
-                  name="password"
-                  type="password"
-                  autoComplete="current-password"
-                  placeholder="비밀번호"
-                  value={form.password}
-                  onChange={onChange}
-                />
-              </label>
-
-              <button type="submit" className="login-btn" disabled={isDisabled}>
-                로그인
-              </button>
-
-              <div className="login-divider" aria-hidden="true">
-                <span />
-                <p>또는</p>
-                <span />
-              </div>
-
-              <Button type="button" className="login-forgot">
-                비밀번호를 잊으셨나요?
-              </Button>
-            </form>
+            <LoginForm />
           </div>
           <p className="login-signup">
             계정이 없으신가요? <button type="button">가입하기</button>
