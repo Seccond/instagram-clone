@@ -29,23 +29,36 @@
 ## 문서
 - 아키텍처 상세: [README_%20Architecture.md](README_%20Architecture.md)
 
-## 현재 진행 상황
-- 라우팅 구성 완료 (로그인/피드/탐색/릴스/메시지/알림/회원가입/계정-프로필)
-- 공통 레이아웃 분리 완료 (`RootLayout`) 및 헤더 네비 구성
-- 검색 패널 컴포넌트 구성 (라우터 제외, 메뉴 토글 방식)
-- 페이지별 디렉토리 구조로 정리 (feed/explore/reels/direct/notifications/auth/account)
-- Vite 경로 alias 설정 적용 (`@`, `@pages`, `@components`, `@features` 등)
-- Redux 스토어 및 유저 상태 슬라이스 구성
-- 상태 변경 로거 미들웨어 적용
-- 유저 인증 미들웨어 연결 (Auth 상태 구독)
-- Firebase Auth/Firestore/Storage 연결 및 서비스 모듈 구성
-- 회원가입/로그인 API (이메일 인증 흐름 포함)
+## 아키텍처 요약
+- 레이어 의존성: app/pages → features → components → core(services/utils)
+- 기능 모듈: `src/features/<feature>`에서 `ui/`, `hooks/`, `index.js` 배럴로 관리
+- 라우터: `src/app/route/route.jsx` (없는 경로는 로그인 상태에 따라 리다이렉트)
+
+## 기능 구현 현황
+- 인증
+  - 회원가입/로그인 (이메일 인증 필수)
+  - 가입 시 `users/{uid}` 프로필 저장, 실패 시 재시도
+  - 로그인 후 UserMiddleware에서 프로필 보완
+- 피드
+  - posts 컬렉션 조회 및 카드 렌더링
+  - 게시물 상세 모달 UI
+  - “만들기” 모달 3단계 (선택/편집/작성) UI 및 업로드 로직
+- 레이아웃
+  - RootLayout 헤더/검색 패널/더보기 모달
+  - 인증 필요 시 안내 모달 후 로그인 페이지로 폴백
+
+## 데이터 구조(요약)
+- `users/{uid}`: email, name, nickname, phone, bio, photoURL, createdAt, updatedAt
+- `posts/{postId}`: userId, username, profileImageUrl, caption, imageUrls, createdAt, likeCount, commentCount, location
+  - `posts/{postId}/likes/{likeId}` (선택)
+  - `posts/{postId}/comments/{commentId}` (선택)
+
+## 환경 변수
+`.env.example`를 복사해 `.env`를 만들고 Firebase 설정값을 입력합니다.
+Firestore는 `(default)` DB가 생성되어 있어야 동작합니다.
 
 ## 실행
 ```bash
 npm install
 npm run dev
 ```
-
-## 환경 변수
-`.env.example`를 복사해 `.env`를 만들고 Firebase 설정값을 입력합니다.
